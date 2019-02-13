@@ -12,7 +12,7 @@ app.post('/', (req, res) => {
   const twiml = new MessagingResponse();
 
   var query = req.body.Body;
-  var key = "AIzaSyAdHZjPKDzaX7e5MYvgy4KAe45O8nRFY9I";
+  var key = "";
   var url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + query + "&key=" + key;
   
 
@@ -110,10 +110,6 @@ app.post('/', (req, res) => {
       // if error
       var message = "outer request fail";
   }
-  // console.log(message);
-  // twiml.message(message);
-  // res.writeHead(200, { 'Content-Type': 'text/xml' });
-  // res.end(twiml.toString());
   });
 });
 
